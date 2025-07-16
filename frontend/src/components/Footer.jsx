@@ -26,7 +26,7 @@ Trusted by thousands. Loved by all. Stay healthy, stay happy.</p>
           <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
           <ul className='flex flex-col gap-2 text-gray-600'>
             <li>+1-212-456-7890</li>
-            <li>greatstackdev@gmail.com</li>
+            <li>kuchipudiashokreddy15@gmail.com</li>
           </ul>
         </div>
 
@@ -34,7 +34,7 @@ Trusted by thousands. Loved by all. Stay healthy, stay happy.</p>
 
       <div>
         <hr />
-        <p className='py-5 text-sm text-center'>Copyright 2024 @ Prescripto.com - All Right Reserved.</p>
+        <p className='py-5 text-sm text-center'>Copyright 2024 @ Ashok.com - All Right Reserved.</p>
       </div>
 
     </div>
