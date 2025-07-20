@@ -30,4 +30,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar    ad logo 
+export default Navbar
