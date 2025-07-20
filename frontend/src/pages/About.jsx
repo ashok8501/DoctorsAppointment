@@ -1,43 +1,69 @@
 import React from 'react'
-import { assets } from '../assets/assets'
 
 const About = () => {
   return (
-    <div>
-
-      <div className='text-center text-2xl pt-10 text-[#707070]'>
-        <p>ABOUT <span className='text-gray-700 font-semibold'>US</span></p>
+    <div className="px-4 md:px-20 lg:px-32">
+      {/* Section Title */}
+      <div className="text-center text-3xl font-semibold text-gray-600 pt-10">
+        <p>
+          ABOUT <span className="text-gray-800 font-bold">US</span>
+        </p>
       </div>
 
-      <div className='my-10 flex flex-col md:flex-row gap-12'>
-        <img className='w-full md:max-w-[360px]' src={assets.about_image} alt="" />
-        <div className='flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600'>
-          <p>Welcome to Prescripto, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.</p>
-          <p>Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, Prescripto is here to support you every step of the way.</p>
-          <b className='text-gray-800'>Our Vision</b>
-          <p>Our vision at Prescripto is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.</p>
+      {/* About Content */}
+      <div className="my-12 flex flex-col md:flex-row items-center gap-12">
+        <img
+          className="w-full md:max-w-sm rounded-xl shadow-md"
+          src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753034575/ChatGPT_Image_Jul_20__2025__11_27_43_PM-removebg-preview_y3rdkg.png"
+          alt="About Prescripto"
+        />
+        <div className="flex flex-col justify-center gap-6 text-gray-700 text-[15px] leading-relaxed">
+          <p>
+            Welcome to <strong className="text-blue-600">SwiftCare</strong>, your trusted partner in managing your healthcare needs conveniently and efficiently. We understand the challenges individuals face when it comes to scheduling doctor appointments and managing health records.
+          </p>
+          <p>
+            SwiftCare is committed to excellence in healthcare technology. We strive to integrate the latest advancements to improve user experience and provide seamless support whether you're booking your first appointment or managing ongoing care.
+          </p>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">Our Vision</h3>
+            <p>
+              To create a seamless healthcare experience for every user — bridging the gap between patients and healthcare providers, ensuring timely and accessible care.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className='text-xl my-4'>
-        <p>WHY  <span className='text-gray-700 font-semibold'>CHOOSE US</span></p>
+      {/* Why Choose Us */}
+      <div className="text-center text-2xl font-semibold text-gray-700 my-10">
+        <p>
+          WHY <span className="text-blue-600 font-bold">CHOOSE US</span>
+        </p>
       </div>
 
-      <div className='flex flex-col md:flex-row mb-20'>
-        <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
-          <b>EFFICIENCY:</b>
-          <p>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
-        </div>
-        <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
-          <b>CONVENIENCE: </b>
-          <p>Access to a network of trusted healthcare professionals in your area.</p>
-        </div>
-        <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
-          <b>PERSONALIZATION:</b>
-          <p >Tailored recommendations and reminders to help you stay on top of your health.</p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {[
+          {
+            title: 'Efficiency',
+            desc: 'Streamlined appointment scheduling that fits into your busy lifestyle.',
+          },
+          {
+            title: 'Convenience',
+            desc: 'Access to a network of trusted healthcare professionals in your area.',
+          },
+          {
+            title: 'Personalization',
+            desc: 'Tailored recommendations and reminders to help you stay on top of your health.',
+          },
+        ].map((item, idx) => (
+          <div
+            key={idx}
+            className="border rounded-xl px-8 py-10 shadow-sm hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer"
+          >
+            <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+            <p className="text-sm">{item.desc}</p>
+          </div>
+        ))}
       </div>
-
     </div>
   )
 }
