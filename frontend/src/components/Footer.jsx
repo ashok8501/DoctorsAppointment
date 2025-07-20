@@ -8,7 +8,7 @@ const Footer = () => {
 
         <div>
           <img className='mb-5 w-40' src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753032299/Gemini_Generated_Image_z648bwz648bwz648_bhewcz.png" alt="" />
-          <p className='w-full md:w-2/3 text-gray-600 leading-6'>Prescripto – Your Health, Our Priority.
+          <p className='w-full md:w-2/3 text-gray-600 leading-6'>SwiftCare – Your Health, Our Priority.
 Trusted by thousands. Loved by all. Stay healthy, stay happy.</p>
         </div>
 
