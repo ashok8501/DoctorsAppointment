@@ -39,6 +39,15 @@ const Navbar = () => {
         <NavLink to='https://doctorsadmin.onrender.com' target='_blank' rel='noopener noreferrer'>
   <li className='py-1'>ADMIN PANEL</li>
 </NavLink>
+        <a
+  href="https://youtu.be/8PXUzdXxrl8?si=2P_m7FKIGVZcCi85"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <li className='py-1 cursor-pointer text-blue-600 hover:underline'>
+    🎥 WATCH DEMO
+  </li>
+</a>
 
       </ul>
 
