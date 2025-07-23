@@ -11,6 +11,7 @@ const AddDoctor = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [showPassword, setShowPassword] = useState(false) // 👁️ Show/hide password
     const [experience, setExperience] = useState('1 Year')
     const [fees, setFees] = useState('')
     const [about, setAbout] = useState('')
@@ -26,7 +27,6 @@ const AddDoctor = () => {
         event.preventDefault()
 
         try {
-
             if (!docImg) {
                 return toast.error('Image Not Selected')
             }
@@ -43,11 +43,6 @@ const AddDoctor = () => {
             formData.append('speciality', speciality)
             formData.append('degree', degree)
             formData.append('address', JSON.stringify({ line1: address1, line2: address2 }))
-
-            // console log formdata            
-            formData.forEach((value, key) => {
-                console.log(`${key}: ${value}`);
-            });
 
             const { data } = await axios.post(backendUrl + '/api/admin/add-doctor', formData, { headers: { aToken } })
             if (data.success) {
@@ -74,22 +69,25 @@ const AddDoctor = () => {
 
     return (
         <form onSubmit={onSubmitHandler} className='m-5 w-full'>
-
             <p className='mb-3 text-lg font-medium'>Add Doctor</p>
 
             <div className='bg-white px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll'>
+                {/* Image Upload */}
                 <div className='flex items-center gap-4 mb-8 text-gray-500'>
                     <label htmlFor="doc-img">
-                        <img className='w-16 bg-gray-100 rounded-full cursor-pointer' src={docImg ? URL.createObjectURL(docImg) : assets.upload_area} alt="" />
+                        <img
+                            className='w-32 h-32 object-cover rounded-full cursor-pointer border-2 border-dashed border-gray-400'
+                            src={docImg ? URL.createObjectURL(docImg) : assets.upload_area}
+                            alt="Doctor Preview"
+                        />
                     </label>
-                    <input onChange={(e) => setDocImg(e.target.files[0])} type="file" name="" id="doc-img" hidden />
+                    <input onChange={(e) => setDocImg(e.target.files[0])} type="file" id="doc-img" hidden />
                     <p>Upload doctor <br /> picture</p>
                 </div>
 
                 <div className='flex flex-col lg:flex-row items-start gap-10 text-gray-600'>
 
                     <div className='w-full lg:flex-1 flex flex-col gap-4'>
-
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Your name</p>
                             <input onChange={e => setName(e.target.value)} value={name} className='border rounded px-3 py-2' type="text" placeholder='Name' required />
@@ -100,10 +98,23 @@ const AddDoctor = () => {
                             <input onChange={e => setEmail(e.target.value)} value={email} className='border rounded px-3 py-2' type="email" placeholder='Email' required />
                         </div>
 
-
-                        <div className='flex-1 flex flex-col gap-1'>
+                        {/* Password Input with Eye Toggle */}
+                        <div className='flex-1 flex flex-col gap-1 relative'>
                             <p>Set Password</p>
-                            <input onChange={e => setPassword(e.target.value)} value={password} className='border rounded px-3 py-2' type="password" placeholder='Password' required />
+                            <input
+                                onChange={e => setPassword(e.target.value)}
+                                value={password}
+                                className='border rounded px-3 py-2 pr-10'
+                                type={showPassword ? 'text' : 'password'}
+                                placeholder='Password'
+                                required
+                            />
+                            <span
+                                onClick={() => setShowPassword(!showPassword)}
+                                className='absolute right-3 top-9 cursor-pointer text-gray-600'
+                            >
+                                {showPassword ? '🙈' : '👁️'}
+                            </span>
                         </div>
 
                         <div className='flex-1 flex flex-col gap-1'>
@@ -125,11 +136,9 @@ const AddDoctor = () => {
                             <p>Fees</p>
                             <input onChange={e => setFees(e.target.value)} value={fees} className='border rounded px-3 py-2' type="number" placeholder='Doctor fees' required />
                         </div>
-
                     </div>
 
                     <div className='w-full lg:flex-1 flex flex-col gap-4'>
-
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Speciality</p>
                             <select onChange={e => setSpeciality(e.target.value)} value={speciality} className='border rounded px-2 py-2'>
@@ -142,7 +151,6 @@ const AddDoctor = () => {
                             </select>
                         </div>
 
-
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Degree</p>
                             <input onChange={e => setDegree(e.target.value)} value={degree} className='border rounded px-3 py-2' type="text" placeholder='Degree' required />
@@ -153,21 +161,16 @@ const AddDoctor = () => {
                             <input onChange={e => setAddress1(e.target.value)} value={address1} className='border rounded px-3 py-2' type="text" placeholder='Address 1' required />
                             <input onChange={e => setAddress2(e.target.value)} value={address2} className='border rounded px-3 py-2' type="text" placeholder='Address 2' required />
                         </div>
-
                     </div>
-
                 </div>
 
                 <div>
                     <p className='mt-4 mb-2'>About Doctor</p>
-                    <textarea onChange={e => setAbout(e.target.value)} value={about} className='w-full px-4 pt-2 border rounded' rows={5} placeholder='write about doctor'></textarea>
+                    <textarea onChange={e => setAbout(e.target.value)} value={about} className='w-full px-4 pt-2 border rounded' rows={5} placeholder='Write about doctor'></textarea>
                 </div>
 
                 <button type='submit' className='bg-primary px-10 py-3 mt-4 text-white rounded-full'>Add doctor</button>
-
             </div>
-
-
         </form>
     )
 }
