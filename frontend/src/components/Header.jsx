@@ -20,9 +20,18 @@ const Header = () => {
             </div>
 
             {/* --------- Header Right --------- */}
+<<<<<<< HEAD
             <div className='md:w-1/2 relative'>
                 <img className='w-full md:absolute bottom-0 h-auto rounded-lg' src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753033755/do-removebg-preview_npqxyd.png" alt="" />
             </div>
+=======
+            <img 
+  className='w-40 md:w-64 lg:w-80 h-auto object-contain' 
+  src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753033755/do-removebg-preview_npqxyd.png" 
+  alt="Header Doctor" 
+/>
+
+>>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
         </div>
     )
 }

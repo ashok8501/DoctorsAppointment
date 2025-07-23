@@ -8,7 +8,12 @@ const Footer = () => {
 
         <div>
           <img className='mb-5 w-40' src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753032299/Gemini_Generated_Image_z648bwz648bwz648_bhewcz.png" alt="" />
+<<<<<<< HEAD
           <p className='w-full md:w-2/3 text-gray-600 leading-6'>SwiftCare – Your Health, Our Priority. Trusted by thousands. Loved by all. Stay healthy, stay happy.</p>
+=======
+          <p className='w-full md:w-2/3 text-gray-600 leading-6'>SwiftCare – Your Health, Our Priority.
+Trusted by thousands. Loved by all. Stay healthy, stay happy.</p>
+>>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
         </div>
 
         <div>
@@ -33,7 +38,11 @@ const Footer = () => {
 
       <div>
         <hr />
+<<<<<<< HEAD
         <p className='py-5 text-sm text-center'>Copyright 2025@ Ashok.com - All Right Reserved.</p>
+=======
+        <p className='py-5 text-sm text-center'>Copyright 2024 @ Ashok.com - All Right Reserved.</p>
+>>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
       </div>
 
     </div>

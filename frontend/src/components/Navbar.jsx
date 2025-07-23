@@ -39,7 +39,11 @@ const Navbar = () => {
         <NavLink to='https://doctorsadmin.onrender.com' target='_blank' rel='noopener noreferrer'>
   <li className='py-1'>ADMIN PANEL</li>
 </NavLink>
+<<<<<<< HEAD
 <a
+=======
+        <a
+>>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
   href="https://youtu.be/8PXUzdXxrl8?si=2P_m7FKIGVZcCi85"
   target="_blank"
   rel="noopener noreferrer"
@@ -49,7 +53,10 @@ const Navbar = () => {
   </li>
 </a>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
       </ul>
 
       <div className='flex items-center gap-4 '>
