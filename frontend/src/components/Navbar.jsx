@@ -6,7 +6,6 @@ import { AppContext } from '../context/AppContext'
 const Navbar = () => {
 
   const navigate = useNavigate()
-
   const [showMenu, setShowMenu] = useState(false)
   const { token, setToken, userData } = useContext(AppContext)
 
@@ -22,41 +21,28 @@ const Navbar = () => {
       <ul className='md:flex items-start gap-5 font-medium hidden'>
         <NavLink to='/' >
           <li className='py-1'>HOME</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/doctors' >
           <li className='py-1'>ALL DOCTORS</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/about' >
           <li className='py-1'>ABOUT</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/contact' >
           <li className='py-1'>CONTACT</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='https://doctorsadmin.onrender.com' target='_blank' rel='noopener noreferrer'>
-  <li className='py-1'>ADMIN PANEL</li>
-</NavLink>
-<<<<<<< HEAD
-<a
-=======
+          <li className='py-1'>ADMIN PANEL</li>
+        </NavLink>
         <a
->>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
-  href="https://youtu.be/8PXUzdXxrl8?si=2P_m7FKIGVZcCi85"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <li className='py-1 cursor-pointer text-blue-600 hover:underline'>
-    🎥 WATCH DEMO
-  </li>
-</a>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 394a389043590822cdf28a02f9f1934ee90dd9bb
+          href="https://youtu.be/8PXUzdXxrl8?si=2P_m7FKIGVZcCi85"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <li className='py-1 cursor-pointer text-blue-600 hover:underline'>
+            🎥 WATCH DEMO
+          </li>
+        </a>
       </ul>
 
       <div className='flex items-center gap-4 '>
