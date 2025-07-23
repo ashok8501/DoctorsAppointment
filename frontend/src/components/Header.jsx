@@ -21,7 +21,7 @@ const Header = () => {
 
             {/* --------- Header Right --------- */}
             <div className='md:w-1/2 relative'>
-                <img className='w-full md:absolute bottom-0 h-auto rounded-lg' src={assets.header_img} alt="" />
+                <img className='w-full md:absolute bottom-0 h-auto rounded-lg' src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753033755/do-removebg-preview_npqxyd.png" alt="" />
             </div>
         </div>
     )

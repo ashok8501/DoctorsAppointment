@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-[#ADADAD]'>
-      <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src={assets.logo} alt="" />
+      <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753032299/Gemini_Generated_Image_z648bwz648bwz648_bhewcz.png" alt="" />
       <ul className='md:flex items-start gap-5 font-medium hidden'>
         <NavLink to='/' >
           <li className='py-1'>HOME</li>
@@ -36,6 +36,20 @@ const Navbar = () => {
           <li className='py-1'>CONTACT</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
+        <NavLink to='https://doctorsadmin.onrender.com' target='_blank' rel='noopener noreferrer'>
+  <li className='py-1'>ADMIN PANEL</li>
+</NavLink>
+<a
+  href="https://youtu.be/8PXUzdXxrl8?si=2P_m7FKIGVZcCi85"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <li className='py-1 cursor-pointer text-blue-600 hover:underline'>
+    🎥 WATCH DEMO
+  </li>
+</a>
+
+
       </ul>
 
       <div className='flex items-center gap-4 '>
