@@ -35,7 +35,7 @@ const Navbar = () => {
           <li className='py-1'>ADMIN PANEL</li>
         </NavLink>
         <a
-          href="https://youtu.be/8PXUzdXxrl8?si=2P_m7FKIGVZcCi85"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
         >

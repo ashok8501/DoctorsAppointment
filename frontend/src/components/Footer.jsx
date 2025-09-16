@@ -27,7 +27,7 @@ const Footer = () => {
           <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
           <ul className='flex flex-col gap-2 text-gray-600'>
             <li>+1-212-456-7890</li>
-            <li>kuchipudiashokreddy15@gmail.com</li>
+            <li>swiftcare@gmail.com</li>
           </ul>
         </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
       <div>
         <hr />
         <p className='py-5 text-sm text-center'>
-          Copyright 2025 @ Ashok.com - All Right Reserved.
+          Copyright 2025 @ Swiftcare.com - All Right Reserved.
         </p>
       </div>
     </div>

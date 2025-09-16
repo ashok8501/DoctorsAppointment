@@ -1,4 +1,5 @@
 import React from 'react'
+import { assets } from '../assets/assets'
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
       <div className="my-12 flex flex-col md:flex-row items-center gap-12">
         <img
           className="w-full md:max-w-sm rounded-xl shadow-md"
-          src="https://res.cloudinary.com/ddkzadleu/image/upload/v1753034575/ChatGPT_Image_Jul_20__2025__11_27_43_PM-removebg-preview_y3rdkg.png"
+          src={assets.about_image}
           alt="About Prescripto"
         />
         <div className="flex flex-col justify-center gap-6 text-gray-700 text-[15px] leading-relaxed">

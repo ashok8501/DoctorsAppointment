@@ -13,7 +13,7 @@ const Contact = () => {
         <div className='flex flex-col justify-center items-start gap-6'>
           <p className='font-semibold text-lg text-gray-600'>OUR OFFICE</p>
           <p className='text-gray-500'>Vizag <br />Kommadhi</p>
-          <p className='text-gray-500'>Tel: (415) 555-0132 <br /> Email: kuchipudiashokreddy15@gmail.com</p>
+          <p className='text-gray-500'>Tel: (415) 555-0132 <br /> Email: swiftcare@gmail.com</p>
 
           <p className='font-semibold text-lg text-gray-600'>CAREERS AT SwiftCare</p>
           <p className='text-gray-500'>Learn more about our teams and job openings.</p>
