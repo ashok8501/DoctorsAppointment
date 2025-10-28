@@ -70,12 +70,19 @@ Each request follows this structured flow:
 
 | Endpoint | Method | Description |
 |-----------|--------|-------------|
-| `/api/users/register` | POST | Register new user |
-| `/api/users/login` | POST | Login existing user |
-| `/api/doctors/register` | POST | Register new doctor |
+| `/api/user/register` | POST | Register a new user | 
+| `/api/user/login` | POST | User login and JWT generation | 
+| `/api/user/get-profile` | GET | Get logged-in user’s profile  |
+| `/api/user/update-profile` | PUT | Update user profile details | 
+| `/api/user/book-appointment` | POST | Book an appointment with a doctor |
+| `/api/user/list-appointments` | GET | Get all user’s booked appointments | 
+| `/api/user/cancel-appointment/:id` | DELETE | Cancel a booked appointment by ID | 
+| `/api/doctor/changeAvailability` | POST |Change the availability | 
+| `/api/user/doctorList` | GET | Get list of all available doctors | 
+| `/api/user/get-doctor/:id` | GET | Get doctor details by ID |
 | `/api/doctors/appointments` | GET | Get doctor’s appointments |
-| `/api/admin/doctors` | GET | Get all doctors (admin only) |
-| `/api/appointments/book` | POST | Book an appointment |
+| `/api/admin/allDoctors` | GET | Get all doctors (admin only) |
+| `/api/admin/add-doctor/:id` | PUT | Add a doctor| 
 
 ---
 
@@ -101,15 +108,20 @@ CLOUDINARY_API_SECRET=your_api_secret
 git clone https://github.com/<your-username>/doctor-appointment-backend.git
 cd doctor-appointment-backend
 
+```
+
 **2. Install dependencies:**
 ```bash
 npm install
+
+```
 
 **3. Configure your .env file**
 
 **4. Run the server:**
 ```bash
 npm start
+```
 
 
 The server will run on:
